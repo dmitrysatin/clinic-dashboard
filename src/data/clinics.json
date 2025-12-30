@@ -1,0 +1,285 @@
+{
+  "clinics": [
+    {
+      "id": "gmsclinic.ru",
+      "name": "GMS Clinic",
+      "city": "Москва",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 84,
+      "functionalityDetails": { "yes": 31, "warning": 1, "no": 6 },
+      "flesch": 39,
+      "wcag": 8,
+      "seo": "good",
+      "integrated": 73,
+      "stars": 5,
+      "app": {
+        "rating": 4.5,
+        "reviewsCount": 5,
+        "negativePercent": 60,
+        "store": "google_play"
+      }
+    },
+    {
+      "id": "emcmos.ru",
+      "name": "EMC",
+      "city": "Москва",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 80,
+      "functionalityDetails": { "yes": 28, "warning": 5, "no": 2 },
+      "flesch": 31,
+      "wcag": 9,
+      "seo": "warning",
+      "integrated": 68,
+      "stars": 5,
+      "app": {
+        "rating": 3.9,
+        "reviewsCount": 4,
+        "negativePercent": 0,
+        "store": "google_play"
+      }
+    },
+    {
+      "id": "mayoclinic.org",
+      "name": "Mayo Clinic",
+      "city": "США",
+      "country": "us",
+      "isBenchmark": true,
+      "functionality": 77,
+      "functionalityDetails": { "yes": 20, "warning": 4, "no": 2 },
+      "flesch": 58,
+      "wcag": 1,
+      "seo": "warning",
+      "integrated": 78,
+      "stars": 4,
+      "app": {
+        "rating": 4.8,
+        "reviewsCount": 50,
+        "negativePercent": 18,
+        "store": "app_store"
+      }
+    },
+    {
+      "id": "medicina.ru",
+      "name": "АО «Медицина»",
+      "city": "Москва",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 73,
+      "functionalityDetails": { "yes": 27, "warning": 7, "no": 3 },
+      "flesch": 38,
+      "wcag": 11,
+      "seo": "warning",
+      "integrated": 65,
+      "stars": 4,
+      "app": {
+        "rating": 3.8,
+        "reviewsCount": 21,
+        "negativePercent": 57,
+        "store": "google_play"
+      }
+    },
+    {
+      "id": "polyclinika.ru",
+      "name": "Поликлиника.ру",
+      "city": "Москва",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 70,
+      "functionalityDetails": { "yes": 21, "warning": 3, "no": 6 },
+      "flesch": 3,
+      "wcag": 11,
+      "seo": "bad",
+      "integrated": 55,
+      "stars": 4,
+      "app": {
+        "rating": 4.8,
+        "reviewsCount": 250,
+        "negativePercent": 11,
+        "store": "google_play"
+      }
+    },
+    {
+      "id": "k-medica.ru",
+      "name": "К медицина",
+      "city": "Москва",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 69,
+      "functionalityDetails": { "yes": 24, "warning": 6, "no": 5 },
+      "flesch": 59,
+      "wcag": 25,
+      "seo": "warning",
+      "integrated": 61,
+      "stars": 4,
+      "app": null
+    },
+    {
+      "id": "medsi.ru",
+      "name": "МЕДСИ",
+      "city": "Москва",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 68,
+      "functionalityDetails": { "yes": 25, "warning": 7, "no": 5 },
+      "flesch": 35,
+      "wcag": 13,
+      "seo": "bad",
+      "integrated": 61,
+      "stars": 4,
+      "app": {
+        "rating": 4.5,
+        "reviewsCount": 250,
+        "negativePercent": 59,
+        "store": "google_play"
+      }
+    },
+    {
+      "id": "fomin-clinic.ru",
+      "name": "Клиника Фомина",
+      "city": "Москва",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 68,
+      "functionalityDetails": { "yes": 25, "warning": 5, "no": 7 },
+      "flesch": 19,
+      "wcag": 6,
+      "seo": "warning",
+      "integrated": 61,
+      "stars": 4,
+      "app": {
+        "rating": 3.8,
+        "reviewsCount": 129,
+        "negativePercent": 48,
+        "store": "google_play"
+      }
+    },
+    {
+      "id": "smclinic.ru",
+      "name": "СМ-Клиника",
+      "city": "Москва",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 65,
+      "functionalityDetails": { "yes": 24, "warning": 5, "no": 8 },
+      "flesch": 73,
+      "wcag": 17,
+      "seo": "good",
+      "integrated": 67,
+      "stars": 4,
+      "app": {
+        "rating": 4.9,
+        "reviewsCount": 250,
+        "negativePercent": 34,
+        "store": "google_play"
+      }
+    },
+    {
+      "id": "klinikasoyuz.ru",
+      "name": "Клиника Союз",
+      "city": "Москва",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 62,
+      "functionalityDetails": { "yes": 23, "warning": 4, "no": 10 },
+      "flesch": 39,
+      "wcag": 18,
+      "seo": "good",
+      "integrated": 56,
+      "stars": 4,
+      "app": null
+    },
+    {
+      "id": "medel.ru",
+      "name": "МЕДЕЛ",
+      "city": "Казань",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 57,
+      "functionalityDetails": { "yes": 20, "warning": 3, "no": 12 },
+      "flesch": 52,
+      "wcag": 40,
+      "seo": "warning",
+      "integrated": 46,
+      "stars": 3,
+      "app": null
+    },
+    {
+      "id": "euromednsk.ru",
+      "name": "Евромед",
+      "city": "Новосибирск",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 51,
+      "functionalityDetails": { "yes": 19, "warning": 9, "no": 9 },
+      "flesch": 47,
+      "wcag": 28,
+      "seo": "bad",
+      "integrated": 48,
+      "stars": 3,
+      "app": null
+    },
+    {
+      "id": "avaclinic.ru",
+      "name": "Скандинавия",
+      "city": "Санкт-Петербург",
+      "country": "ru",
+      "isBenchmark": false,
+      "functionality": 50,
+      "functionalityDetails": { "yes": 18, "warning": 8, "no": 10 },
+      "flesch": 43,
+      "wcag": 48,
+      "seo": "warning",
+      "integrated": 36,
+      "stars": 3,
+      "app": {
+        "rating": 3.0,
+        "reviewsCount": 71,
+        "negativePercent": 51,
+        "store": "google_play"
+      }
+    },
+    {
+      "id": "clevelandclinic.org",
+      "name": "Cleveland Clinic",
+      "city": "США",
+      "country": "us",
+      "isBenchmark": true,
+      "functionality": 43,
+      "functionalityDetails": { "yes": 16, "warning": 9, "no": 12 },
+      "flesch": 47,
+      "wcag": 1,
+      "seo": "good",
+      "integrated": 58,
+      "stars": 2,
+      "app": {
+        "rating": 4.7,
+        "reviewsCount": 60,
+        "negativePercent": 22,
+        "store": "app_store"
+      }
+    },
+    {
+      "id": "charite.de",
+      "name": "Charité",
+      "city": "Германия",
+      "country": "de",
+      "isBenchmark": true,
+      "functionality": 34,
+      "functionalityDetails": { "yes": 12, "warning": 6, "no": 17 },
+      "flesch": 33,
+      "wcag": 17,
+      "seo": "warning",
+      "integrated": 41,
+      "stars": 2,
+      "app": null
+    }
+  ],
+  "meta": {
+    "totalClinics": 15,
+    "totalReviews": 1090,
+    "checklistItems": 37,
+    "auditDate": "2025-12"
+  }
+}
