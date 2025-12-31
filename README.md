@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# Дашборд UX-аудита клиник
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Интерактивный дашборд для сравнения UX-показателей медицинских клиник.
 
-Currently, two official plugins are available:
+**Демо:** https://dmitrysatin.github.io/clinic-dashboard/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Обновление данных клиник
 
-## React Compiler
+Данные хранятся в файле `src/data/clinics.json`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Структура данных клиники
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
+```json
+{
+  "id": "example.ru",           // URL сайта (используется как ID и ссылка)
+  "name": "Название клиники",   // Отображаемое название
+  "city": "Москва",             // Город
+  "country": "ru",              // Код страны: "ru" или "us"
+  "isBenchmark": false,         // true для эталонных клиник (пунктирная рамка)
+  "functionality": 73,          // Функциональность (0-100%)
+  "functionalityDetails": {     // Детализация функциональности
+    "yes": 27,                  // Количество "да"
+    "warning": 7,               // Количество "частично"
+    "no": 3                     // Количество "нет"
   },
-])
+  "flesch": 38,                 // Читабельность по Flesch (0-100)
+  "wcag": 11,                   // Количество WCAG-ошибок (меньше = лучше)
+  "seo": "warning",             // SEO: "good", "warning" или "bad"
+  "integrated": 65,             // Интегральный балл (0-100)
+  "stars": 4,                   // Устаревшее поле (не используется)
+  "app": {                      // Мобильное приложение (null если нет)
+    "rating": 3.8,              // Рейтинг (0-5)
+    "reviewsCount": 21,         // Количество отзывов
+    "negativePercent": 57,      // Процент негативных отзывов
+    "store": "google_play"      // "google_play" или "app_store"
+  }
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Добавление новой клиники
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Откройте `src/data/clinics.json`
+2. Добавьте новый объект в массив `clinics`
+3. Заполните все обязательные поля
+4. Если нет приложения, укажите `"app": null`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Редактирование существующей клиники
+
+1. Найдите клинику по `id` в файле `src/data/clinics.json`
+2. Измените нужные поля
+3. Сохраните файл
+
+## Локальная разработка
+
+```bash
+# Установка зависимостей
+npm install
+
+# Запуск dev-сервера
+npm run dev
+
+# Сборка
+npm run build
 ```
+
+## Деплой на GitHub Pages
+
+```bash
+npm run deploy
+```
+
+Сайт обновится на https://dmitrysatin.github.io/clinic-dashboard/
+
+## Технологии
+
+- React 19 + TypeScript
+- Vite
+- Recharts (графики)
+- Lucide React (иконки)
