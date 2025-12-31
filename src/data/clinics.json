@@ -13,6 +13,12 @@
       "seo": "good",
       "integrated": 73,
       "stars": 5,
+      "issues": {
+        "functionality": ["H1 скрыт визуально", "Нет карточек врачей на главной"],
+        "wcag": ["alt-тексты отсутствуют"],
+        "flesch": ["52% сложных слов"],
+        "seo": ["Description 183 симв. — длинный"]
+      },
       "app": {
         "rating": 4.5,
         "reviewsCount": 5,
@@ -33,6 +39,12 @@
       "seo": "warning",
       "integrated": 68,
       "stars": 5,
+      "issues": {
+        "functionality": ["Нет H1 на странице", "Нет плавающей кнопки записи"],
+        "wcag": ["alt-тексты отсутствуют", "Ссылки без текста"],
+        "flesch": ["Сложно для понимания"],
+        "seo": ["H1 отсутствует", "Description 205 симв."]
+      },
       "app": {
         "rating": 3.9,
         "reviewsCount": 4,
@@ -53,6 +65,12 @@
       "seo": "warning",
       "integrated": 78,
       "stars": 4,
+      "issues": {
+        "functionality": ["Нет телефона (US-модель)", "Request вместо мгновенной записи"],
+        "wcag": ["Проблемы с label форм"],
+        "flesch": ["Эталон читабельности"],
+        "seo": ["Description отсутствует"]
+      },
       "app": {
         "rating": 4.8,
         "reviewsCount": 50,
@@ -73,6 +91,12 @@
       "seo": "warning",
       "integrated": 65,
       "stars": 4,
+      "issues": {
+        "functionality": ["Нет плавающей кнопки записи", "Нет раздела «Для женщин»"],
+        "wcag": ["alt-тексты изображений", "Кнопки без aria-label"],
+        "flesch": ["55% сложных слов"],
+        "seo": ["Title 99 симв.", "Description 337 симв."]
+      },
       "app": {
         "rating": 3.8,
         "reviewsCount": 21,
@@ -93,6 +117,12 @@
       "seo": "bad",
       "integrated": 55,
       "stars": 4,
+      "issues": {
+        "functionality": ["Нет H1, только H2", "Нет навигации по симптомам"],
+        "wcag": ["alt-тексты отсутствуют", "Кнопки без label"],
+        "flesch": ["Критично сложно — 3.35 слога/слово"],
+        "seo": ["H1 отсутствует", "Нет JSON-LD"]
+      },
       "app": {
         "rating": 4.8,
         "reviewsCount": 250,
@@ -113,6 +143,12 @@
       "seo": "warning",
       "integrated": 61,
       "stars": 4,
+      "issues": {
+        "functionality": ["Модалка при входе раздражает", "Кнопка «Загрузить ещё» не работает"],
+        "wcag": ["12 critical ошибок"],
+        "flesch": ["Хороший результат"],
+        "seo": ["Description 267 симв.", "Нет JSON-LD"]
+      },
       "app": null
     },
     {
@@ -128,6 +164,12 @@
       "seo": "bad",
       "integrated": 61,
       "stars": 4,
+      "issues": {
+        "functionality": ["Нет H1 на странице", "Нет блока врачей на главной"],
+        "wcag": ["alt-тексты отсутствуют", "Ссылки без текста"],
+        "flesch": ["55% сложных слов"],
+        "seo": ["Title 131 симв. — критично", "Нет OG, нет JSON-LD"]
+      },
       "app": {
         "rating": 4.5,
         "reviewsCount": 250,
@@ -148,6 +190,12 @@
       "seo": "warning",
       "integrated": 61,
       "stars": 4,
+      "issues": {
+        "functionality": ["Нет раздела «Программы»", "Нет блока отзывов"],
+        "wcag": ["Проблемы с контрастностью"],
+        "flesch": ["Очень сложный текст"],
+        "seo": ["Description длинный"]
+      },
       "app": {
         "rating": 3.8,
         "reviewsCount": 129,
@@ -168,6 +216,12 @@
       "seo": "good",
       "integrated": 67,
       "stars": 4,
+      "issues": {
+        "functionality": ["Попап перекрывает контент", "Нет cookie-баннера"],
+        "wcag": ["alt-тексты отсутствуют", "Контрастность низкая"],
+        "flesch": ["Лучший результат среди RU"],
+        "seo": ["Description 298 симв."]
+      },
       "app": {
         "rating": 4.9,
         "reviewsCount": 250,
@@ -188,6 +242,12 @@
       "seo": "good",
       "integrated": 56,
       "stars": 4,
+      "issues": {
+        "functionality": ["H1='О клинике' неинформативен", "Нет поиска по сайту"],
+        "wcag": ["Пустые заголовки H2/H3"],
+        "flesch": ["56% сложных слов"],
+        "seo": ["Description 187 симв."]
+      },
       "app": null
     },
     {
@@ -203,6 +263,12 @@
       "seo": "warning",
       "integrated": 46,
       "stars": 3,
+      "issues": {
+        "functionality": ["H1 отсутствует", "Телефон через JS, не tel:"],
+        "wcag": ["40 ошибок — критично", "Ссылки, контрастность"],
+        "flesch": ["45% сложных слов"],
+        "seo": ["H1 отсутствует", "Нет OG-тегов"]
+      },
       "app": null
     },
     {
@@ -218,6 +284,12 @@
       "seo": "bad",
       "integrated": 48,
       "stars": 3,
+      "issues": {
+        "functionality": ["H1 отсутствует", "Нет телефона в шапке"],
+        "wcag": ["27 critical ошибок — худший", "alt отсутствуют массово"],
+        "flesch": ["50% сложных слов"],
+        "seo": ["Нет H1, нет OG, нет JSON-LD"]
+      },
       "app": null
     },
     {
@@ -233,6 +305,12 @@
       "seo": "warning",
       "integrated": 36,
       "stars": 3,
+      "issues": {
+        "functionality": ["Телефон скрыт за иконкой", "Нет блока врачей на главной"],
+        "wcag": ["48 ошибок — критично", "Ссылки без текста"],
+        "flesch": ["53% сложных слов"],
+        "seo": ["Title 63 симв.", "Нет JSON-LD"]
+      },
       "app": {
         "rating": 3.0,
         "reviewsCount": 71,
@@ -253,6 +331,12 @@
       "seo": "good",
       "integrated": 58,
       "stars": 2,
+      "issues": {
+        "functionality": ["Нет телефона (US-модель)", "Нет блока врачей на главной"],
+        "wcag": ["Эталон — 1 ошибка"],
+        "flesch": ["Средний уровень"],
+        "seo": ["Эталон SEO"]
+      },
       "app": {
         "rating": 4.7,
         "reviewsCount": 60,
@@ -273,6 +357,12 @@
       "seo": "warning",
       "integrated": 41,
       "stars": 2,
+      "issues": {
+        "functionality": ["Сложная навигация", "Нет онлайн-записи"],
+        "wcag": ["Проблемы с контрастностью"],
+        "flesch": ["Сложный академический текст"],
+        "seo": ["Description длинный"]
+      },
       "app": null
     }
   ],

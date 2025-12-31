@@ -53,6 +53,17 @@ function getSeoLabel(seo: 'good' | 'warning' | 'bad'): string {
   return 'Критично';
 }
 
+function IssuesList({ issues }: { issues: string[] }) {
+  if (!issues || issues.length === 0) return null;
+  return (
+    <ul className="clinic-card__issues">
+      {issues.map((issue, i) => (
+        <li key={i}>{issue}</li>
+      ))}
+    </ul>
+  );
+}
+
 function DimensionStars({ clinic }: { clinic: Clinic }) {
   const funcStars = getStarsForValue(clinic.functionality, 100);
   const wcagStars = getStarsForValue(clinic.wcag, 50, true);
@@ -62,43 +73,57 @@ function DimensionStars({ clinic }: { clinic: Clinic }) {
 
   return (
     <div className="clinic-card__dimension-stars">
-      <div className="clinic-card__dimension-row">
-        <span className="clinic-card__dimension-label">
-          Функциональность
-          <span className="clinic-card__dimension-detail">({clinic.functionality}%)</span>
-        </span>
-        <Stars count={funcStars} size={12} />
-      </div>
-      <div className="clinic-card__dimension-row">
-        <span className="clinic-card__dimension-label">
-          Доступность
-          <span className="clinic-card__dimension-detail">({clinic.wcag} ошибок)</span>
-        </span>
-        <Stars count={wcagStars} size={12} />
-      </div>
-      <div className="clinic-card__dimension-row">
-        <span className="clinic-card__dimension-label">
-          Читабельность
-          <span className="clinic-card__dimension-detail">(Flesch {clinic.flesch})</span>
-        </span>
-        <Stars count={fleschStars} size={12} />
-      </div>
-      <div className="clinic-card__dimension-row">
-        <span className="clinic-card__dimension-label">
-          SEO
-          <span className={`clinic-card__dimension-detail clinic-card__dimension-detail--${clinic.seo}`}>
-            ({getSeoLabel(clinic.seo)})
-          </span>
-        </span>
-        <Stars count={seoStars} size={12} />
-      </div>
-      {clinic.app && (
+      <div className="clinic-card__dimension-group">
         <div className="clinic-card__dimension-row">
           <span className="clinic-card__dimension-label">
-            Приложение
-            <span className="clinic-card__dimension-detail">({clinic.app.rating.toFixed(1)}★, {clinic.app.reviewsCount} отз.)</span>
+            Функциональность
+            <span className="clinic-card__dimension-detail">({clinic.functionality}%)</span>
           </span>
-          <Stars count={appStars} size={12} />
+          <Stars count={funcStars} size={12} />
+        </div>
+        <IssuesList issues={clinic.issues.functionality} />
+      </div>
+      <div className="clinic-card__dimension-group">
+        <div className="clinic-card__dimension-row">
+          <span className="clinic-card__dimension-label">
+            Доступность
+            <span className="clinic-card__dimension-detail">({clinic.wcag} ошибок)</span>
+          </span>
+          <Stars count={wcagStars} size={12} />
+        </div>
+        <IssuesList issues={clinic.issues.wcag} />
+      </div>
+      <div className="clinic-card__dimension-group">
+        <div className="clinic-card__dimension-row">
+          <span className="clinic-card__dimension-label">
+            Читабельность
+            <span className="clinic-card__dimension-detail">(Flesch {clinic.flesch})</span>
+          </span>
+          <Stars count={fleschStars} size={12} />
+        </div>
+        <IssuesList issues={clinic.issues.flesch} />
+      </div>
+      <div className="clinic-card__dimension-group">
+        <div className="clinic-card__dimension-row">
+          <span className="clinic-card__dimension-label">
+            SEO
+            <span className={`clinic-card__dimension-detail clinic-card__dimension-detail--${clinic.seo}`}>
+              ({getSeoLabel(clinic.seo)})
+            </span>
+          </span>
+          <Stars count={seoStars} size={12} />
+        </div>
+        <IssuesList issues={clinic.issues.seo} />
+      </div>
+      {clinic.app && (
+        <div className="clinic-card__dimension-group">
+          <div className="clinic-card__dimension-row">
+            <span className="clinic-card__dimension-label">
+              Приложение
+              <span className="clinic-card__dimension-detail">({clinic.app.rating.toFixed(1)}★, {clinic.app.reviewsCount} отз.)</span>
+            </span>
+            <Stars count={appStars} size={12} />
+          </div>
         </div>
       )}
     </div>

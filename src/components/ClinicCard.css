@@ -129,13 +129,40 @@
 .clinic-card__dimension-stars {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
+}
+
+.clinic-card__dimension-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .clinic-card__dimension-row {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.clinic-card__issues {
+  margin: 0;
+  padding: 0 0 0 16px;
+  list-style: none;
+}
+
+.clinic-card__issues li {
+  font-size: 11px;
+  color: #999;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 8px;
+}
+
+.clinic-card__issues li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ccc;
 }
 
 .clinic-card__dimension-label {

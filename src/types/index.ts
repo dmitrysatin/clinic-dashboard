@@ -11,6 +11,13 @@ export interface FunctionalityDetails {
   no: number;
 }
 
+export interface ClinicIssues {
+  functionality: string[];
+  wcag: string[];
+  flesch: string[];
+  seo: string[];
+}
+
 export interface Clinic {
   id: string;
   name: string;
@@ -24,6 +31,7 @@ export interface Clinic {
   seo: 'good' | 'warning' | 'bad';
   integrated: number;
   stars: number;
+  issues: ClinicIssues;
   app: ClinicApp | null;
 }
 
