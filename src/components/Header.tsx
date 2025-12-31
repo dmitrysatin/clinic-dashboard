@@ -1,4 +1,3 @@
-import { Activity } from 'lucide-react';
 import './Header.css';
 
 interface HeaderProps {
@@ -11,12 +10,11 @@ interface HeaderProps {
 }
 
 export function Header({ meta }: HeaderProps) {
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <header className="header">
-      <div className="header__logo">
-        <Activity size={32} />
-        <span className="header__brand">UsabilityLab</span>
-      </div>
+      <img src={`${basePath}logo.svg`} alt="UsabilityLab" className="header__logo" />
       <div className="header__content">
         <h1 className="header__title">UX-аудит медицинских клиник</h1>
         <p className="header__subtitle">
