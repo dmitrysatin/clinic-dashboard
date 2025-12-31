@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell } from 'recharts';
 import type { Clinic, MetricType } from '../types';
 import './RatingChart.css';
 
@@ -63,25 +63,6 @@ function getMetricValue(clinic: Clinic, metric: MetricType): number {
       return clinic.app ? clinic.app.rating * 20 : 0;
     default:
       return clinic.integrated;
-  }
-}
-
-function getMetricLabel(metric: MetricType): string {
-  switch (metric) {
-    case 'integrated':
-      return 'Интегральный балл';
-    case 'functionality':
-      return 'Функциональность (%)';
-    case 'wcag':
-      return 'Доступность (100 - ошибки×2)';
-    case 'flesch':
-      return 'Читабельность (Flesch)';
-    case 'seo':
-      return 'SEO (good=100, warning=50, bad=0)';
-    case 'app':
-      return 'Рейтинг приложения (×20)';
-    default:
-      return '';
   }
 }
 
@@ -185,10 +166,6 @@ export function RatingChart({ clinics, metric, onMetricChange, onClinicClick, se
                   onClinicClick={onClinicClick}
                 />
               )}
-            />
-            <Tooltip
-              formatter={(value) => [`${Number(value).toFixed(0)}`, getMetricLabel(metric)]}
-              cursor={{ fill: 'rgba(0,0,0,0.05)' }}
             />
             <Bar
               dataKey="value"

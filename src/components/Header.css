@@ -1,8 +1,9 @@
 .header {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 20px 16px;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
   background: var(--color-primary);
   color: white;
   position: sticky;
@@ -13,53 +14,55 @@
 .header__logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.header__logo svg {
+  width: 24px;
+  height: 24px;
 }
 
 .header__brand {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 .header__content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
+  min-width: 0;
 }
 
 .header__title {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
   margin: 0;
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header__subtitle {
-  font-size: 14px;
+  font-size: 11px;
   opacity: 0.8;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: 768px) {
   .header {
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    padding: 16px 32px;
+    padding: 12px 32px;
   }
 
-  .header__title {
-    font-size: 22px;
-  }
-
-  .header__content {
-    text-align: right;
-  }
-}
-
-@media (min-width: 1024px) {
-  .header {
-    padding: 12px 24px;
+  .header__logo svg {
+    width: 28px;
+    height: 28px;
   }
 
   .header__brand {
@@ -72,5 +75,15 @@
 
   .header__subtitle {
     font-size: 13px;
+  }
+
+  .header__content {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 12px 24px;
   }
 }

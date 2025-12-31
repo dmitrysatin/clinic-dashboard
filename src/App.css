@@ -6,7 +6,7 @@
   --color-error: #cf2e2e;
   --color-bg: #ffffff;
   --color-text: #000000;
-  --header-height: 80px;
+  --header-height: 48px;
 }
 
 * {
@@ -104,7 +104,7 @@ body {
 
 @media (min-width: 768px) {
   :root {
-    --header-height: 60px;
+    --header-height: 52px;
   }
 
   .app__cards-title {
