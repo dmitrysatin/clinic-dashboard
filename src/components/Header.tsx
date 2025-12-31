@@ -16,9 +16,9 @@ export function Header({ meta }: HeaderProps) {
     <header className="header">
       <img src={`${basePath}logo.svg`} alt="UsabilityLab" className="header__logo" />
       <div className="header__content">
-        <h1 className="header__title">UX-аудит медицинских клиник</h1>
+        <h1 className="header__title">UX-аудит медклиник</h1>
         <p className="header__subtitle">
-          {meta.totalClinics} клиник &middot; {meta.checklistItems} элементов &middot; {meta.totalReviews} отзывов
+          {meta.totalClinics} клиник &middot; {meta.checklistItems} критериев &middot; {meta.totalReviews} отзывов
         </p>
       </div>
     </header>
