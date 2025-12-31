@@ -107,11 +107,11 @@ function DimensionStars({ clinic }: { clinic: Clinic }) {
 
 function ClinicRadar({ clinic }: { clinic: Clinic }) {
   const data = [
-    { metric: 'Функц.', value: clinic.functionality },
-    { metric: 'Доступн.', value: Math.max(0, 100 - clinic.wcag * 2) },
-    { metric: 'Читаб.', value: clinic.flesch },
+    { metric: 'Функциональность', value: clinic.functionality },
+    { metric: 'Доступность', value: Math.max(0, 100 - clinic.wcag * 2) },
+    { metric: 'Читабельность', value: clinic.flesch },
     { metric: 'SEO', value: getSeoValue(clinic.seo) },
-    { metric: 'App', value: clinic.app ? clinic.app.rating * 20 : 0 },
+    { metric: 'Приложение', value: clinic.app ? clinic.app.rating * 20 : 0 },
   ];
 
   return (
